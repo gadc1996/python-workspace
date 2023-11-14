@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./:/var/app
+    networks:
+      - workspace
+    env_file:
+      - .env
+
+networks:
+  workspace:
