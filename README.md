@@ -23,6 +23,8 @@ git clone https://github.com/gadc1996/django-api
 cp .env.example .env
 ```
 
+3. Update workspace name in `.devcontainer/devcontainer.json`
+
 ## Installing Dev Containers
 
 Follow these steps to install Dev Containers:
