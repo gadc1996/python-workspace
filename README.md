@@ -1,6 +1,8 @@
 # Python workspace
 [![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/gadc1996/python-workspace)
+[![Actions Status](https://github.com/gadc1996/python-workspace/workflows/Lint/badge.svg)](https://github.com/gadc1996/python-workspace/actions)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 ## Description
 Ready to go python development workspace
 
