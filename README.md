@@ -17,7 +17,7 @@ Before you begin, make sure you have the following:
 ## Installation
 1. Clone repository
 ```
-git clone https://github.com/gadc1996/django-api
+git clone https://github.com/gadc1996/python-workspace.git
 ```
 
 2. Copy env file
