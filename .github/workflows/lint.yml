@@ -1,0 +1,26 @@
+name: Lint
+
+on: 
+  push: 
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions: 
+      contents: write
+      
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11' 
+
+      - name: Lint Python files
+        run: |
+          pip install black
+          black .
+
+      - name: Commit version change
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Fix lint [skip ci]
