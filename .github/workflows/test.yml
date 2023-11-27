@@ -1,6 +1,7 @@
 name: Test
 
-on: [push, pull_request]
+on: 
+  push:
 
 jobs:
   test:
@@ -14,7 +15,6 @@ jobs:
 
       - name: Intall dependencies
         run: |
-          pip install .
           pip install pytest
           pytest tests/
 
