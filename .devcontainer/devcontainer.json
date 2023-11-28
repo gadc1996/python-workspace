@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-docker-compose
 {
-	"name": "Python Workspace",
+	"name": "${localEnv:APP_NAME}",
 	"dockerComposeFile": "../docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/var/app",
@@ -11,7 +11,7 @@
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"ms-python.black-formatter",
-				"batisteo.vscode-django",
+				"github.vscode-github-actions"
 			],
 			"settings": {
 				"terminal.integrated.shell.linux": "/bin/bash"
@@ -21,5 +21,8 @@
 	"overrideCommand": true,
 	"features": {
 	},
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+	"mounts": [
+		"source=~/.ssh,target=/home/vscode/.ssh,type=bind"
+	]
 }
