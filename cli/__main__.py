@@ -1,12 +1,9 @@
-import click
 import os
-import sys
+import click
 from importlib import import_module
 
 class Root:
     def __init__(self, base_dir="cli"):
-        print(sys.path)
-        print(os.getcwd())
         self.base_dir = base_dir
         self.base_path = os.path.join(os.getcwd(), base_dir)
 
@@ -73,8 +70,6 @@ class Command:
             and item.endswith(".py")
             and os.path.isfile(os.path.join(path, item))
         )
-
-
 
 if __name__ == "__main__":
     Root()
