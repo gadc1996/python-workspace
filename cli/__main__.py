@@ -2,6 +2,7 @@ import os
 import click
 from importlib import import_module
 
+
 class Root:
     def __init__(self, base_dir="cli"):
         self.base_dir = base_dir
@@ -24,6 +25,7 @@ class Root:
             if Command.is_valid(item, self.base_dir):
                 command = Command(item, self.base_dir)
                 root.add_command(command.get())
+
 
 class Group:
     def __init__(self, name: str, directory: str) -> None:
@@ -52,6 +54,7 @@ class Group:
     def is_valid(item: str, path: str):
         return not item.startswith("__") and os.path.isdir(os.path.join(path, item))
 
+
 class Command:
     def __init__(self, name: str, directory: str) -> None:
         # Remove .py from name
@@ -70,6 +73,7 @@ class Command:
             and item.endswith(".py")
             and os.path.isfile(os.path.join(path, item))
         )
+
 
 if __name__ == "__main__":
     Root()
