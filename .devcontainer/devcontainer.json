@@ -1,28 +1,22 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-docker-compose
 {
-	"name": "${localEnv:APP_NAME}",
-	"dockerComposeFile": "../docker-compose.yml",
+	"name": "Python Workspace",
+	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
-	"workspaceFolder": "/var/app",
+	"workspaceFolder": "/app",
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"GitHub.copilot",
+				"GitHub.vscode-github-actions",
 				"ms-python.python",
-				"ms-python.vscode-pylance",
-				"ms-python.black-formatter",
-				"github.vscode-github-actions"
-			],
-			"settings": {
-				"terminal.integrated.shell.linux": "/bin/bash"
-			}
+				"ms-python.black-formatter"
+			]
 		}
 	},
 	"overrideCommand": true,
 	"features": {
-	},
-	"remoteUser": "vscode",
-	"mounts": [
-		"source=~/.ssh,target=/home/vscode/.ssh,type=bind"
-	]
+		// "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	}
 }
